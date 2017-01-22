@@ -16,6 +16,37 @@
 - :star: : 基本的にはこれに従います。
 - :heart: : 必ず従わないといけないわけではないけど、なるべくこのスタイルでいきたいなという場合に付けます。
 
+## スタイル
+- :star: インデントは4、ソフトタブを用いる
+- :star: 関数と関数の間は1行空ける
+- :star: 定数、プロパティ宣言はクラス宣言の上部に記述する
+- :star: `{}`(brace)は開始は最後の文字から1文字空けて記述し、終わりは改行する
+- :star: ファイルの最後(EOF)にに1行改行を入れる
+- :star: ドキュメントコメントを書く場合は、 `///` を使う
+- :star: 適切な区切りを表現する時は、 `// MARK: - ` を使う
+
+```swift
+class SomeClass {
+    private let name: String
+    
+    init(name: String) {
+        self.name = name
+    }
+    
+    /// do something
+    func doSomething() {
+        print(name)
+    }
+    
+    // MARK: - action
+    
+    func doSomeAction() {
+        //....
+    }
+}
+
+```
+
 ## 定数と変数、プロパティ
 - :star: 値の変更をしない場合は必ず `let` を用いる
 - :heart: `lazy var` を用いる場合、生成処理が複数行に渡る場合は生成処理を行う関数を定義し、closureでの生成処理を避ける
